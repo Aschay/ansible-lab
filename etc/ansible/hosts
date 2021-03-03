@@ -50,3 +50,5 @@ ansible_password=C1sco12345
 ansible_connection=network_cli
 ansible_network_os=ios
 ansible_port=8181
+[dockermachine]
+192.168.8.101  ansible_ssh_user=docker ansible_ssh_pass=tcuser

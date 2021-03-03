@@ -1,0 +1,14 @@
+##managed just to run raw command or shell but not docker.community problem with python on tinycore
+---
+- name: Running basic  docker containers
+  hosts: dockermachine
+  tasks: 
+
+  - name: Pull an image
+    shell : docker pull hello-world
+    register: docker
+  - debug: var=docker.stdout_lines 
+  - name : info about docker machine
+    shell : docker info 
+    register : ps
+  - debug: var=ps.stdout_lines
