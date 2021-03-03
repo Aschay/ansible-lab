@@ -31,5 +31,7 @@ echo "docker:newPassword"|sudo chpasswd
 
 tinycore doesnt not haven python install , to execute ansible command, so its imporant execute 
 ```
-tce-load -wi python3.6.tcz
+tce-load -wi  python3.6
+sudo pip3 install docker
+
 ```

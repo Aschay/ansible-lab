@@ -1,6 +1,5 @@
-##managed just to run raw command or shell but not docker.community problem with python on tinycore
 ---
-- name: Running basic  docker containers
+- name: Running basic docker commands
   hosts: dockermachine
   tasks: 
 
@@ -12,3 +11,10 @@
     shell : docker info 
     register : ps
   - debug: var=ps.stdout_lines
+  - name: create webserver container
+    docker_container:
+      detach: false
+      name: nginx
+      image: nginx
+      ports:
+       - "80:80"
