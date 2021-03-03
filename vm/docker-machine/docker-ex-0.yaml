@@ -1,7 +1,13 @@
 ---
 - name: Running basic docker commands
   hosts: dockermachine
+
   tasks: 
+
+  - name:  prepare tinycore to run community.docker commands
+    become: true
+    shell : pip3 install docker
+    register: dc 
 
   - name: Pull an image
     shell : docker pull hello-world
@@ -9,12 +15,12 @@
   - debug: var=docker.stdout_lines 
   - name : info about docker machine
     shell : docker info 
-    register : ps
-  - debug: var=ps.stdout_lines
-  - name: create webserver container
+    register : inf
+  - debug: var=inf.stdout_lines
+  - name: run webserver container
     docker_container:
-      detach: false
       name: nginx
+      detach : true
       image: nginx
       ports:
        - "80:80"
