@@ -1,0 +1,5 @@
+---
+create_containers: 2
+default_container_name: busybox
+default_container_image: hello-world
+default_container_command: sleep 1d
