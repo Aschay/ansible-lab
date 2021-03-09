@@ -29,7 +29,7 @@ And add this
 echo "docker:newPassword"|sudo chpasswd
 ```
 
-tinycore doesnt not haven python install to execute ansible command so it's imporant to add it 
+tinycore doesnt not haven python installed to execute ansible command so it's imporant to add it 
 ```
 tce-load -wi  python3.6
 sudo pip3 install docker
