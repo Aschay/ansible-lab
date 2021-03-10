@@ -6,4 +6,4 @@ The playbook ubuntu-ex-0.yaml uses the installation steps that are recreated fro
 Also  it used root for installation and creating and running containers.
 This is for test . Its advicible to create a user that can execute docker commands.
 
-The playbook ubuntu-ex-0.yaml  uses ansible role to install docker automatically   ```ansible-galaxy install geerlingguy.docker```
+The playbook ubuntu-ex-1.yaml  uses ansible role to install docker automatically   ```ansible-galaxy install geerlingguy.docker```
